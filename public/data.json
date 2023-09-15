@@ -3,7 +3,7 @@
         "id": 1,
         "cover_img": "https://i.ibb.co/PZQdyC2/Rectangle-2-2.png",
         "title": "Introduction to C Programming",
-        "description": "'Introduction to C Programming' is a comprehensive guide designed to introduce beginners to the fundamentals of the C programming language.",
+        "description": "Fundamental Concepts: Getting Started with C Programming Language.",
         "price": 10000,
         "credit": 5
     },
@@ -11,7 +11,7 @@
         "id": 2,
         "cover_img": "https://i.ibb.co/Qj7L3By/Rectangle-2-3.png",
         "title": "Introduction to Algorithms",
-        "description": "'Introduction to Algorithms' is an indispensable resource for anyone looking to dive into the world of algorithmic problem-solving.",
+        "description": "Algorithmic Foundations: Mastering the Basics of Problem Solving.",
         "price": 28000,
         "credit": 7
     },
@@ -19,7 +19,7 @@
         "id": 3,
         "cover_img": "https://i.ibb.co/6R8m3sp/Rectangle-2-4.png",
         "title": "Introduction to C++ for DSA",
-        "description": "'Introduction to C++ for DSA' is a comprehensive guide tailored for individuals aspiring to master the art of data structures and algorithms using the C++ programming language. ",
+        "description": "DSA Essentials: Learning C++ for Effective Problem-Solving Techniques. ",
         "price": 12000,
         "credit": 10
     },
@@ -27,7 +27,7 @@
         "id": 4,
         "cover_img": "https://i.ibb.co/C8Qv2Q8/Rectangle-3.png",
         "title": "Basic Data Structures",
-        "description": "'Basic Data Structures' is a foundational guide designed to provide a solid understanding of essential data structures in computer science.",
+        "description": "Basic Data Structures: A Comprehensive Introduction to Efficient Programming.",
         "price": 25000,
         "credit": 4
     },
@@ -35,7 +35,7 @@
         "id": 5,
         "cover_img": "https://i.ibb.co/WWvXD5r/Rectangle-2.png",
         "title": "Introduction to OOP Python",
-        "description": "'Introduction to Object-Oriented Programming (OOP) in Python' is a comprehensive guide tailored for individuals looking to delve into the world of object-oriented programming using the Python programming language.",
+        "description": "Python OOP Essentials: A Comprehensive Introduction to Object-Oriented Programming.",
         "price": 20000,
         "credit": 7
     },
@@ -43,7 +43,7 @@
         "id": 6,
         "cover_img": "https://i.ibb.co/RCyCHcQ/Rectangle-2-5.png",
         "title": "Software Engineering",
-        "description": "'Software Engineering' is a comprehensive guide that delves into the principles, practices, and methodologies behind the development of high-quality software systems.",
+        "description": "Software Engineering Essentials: A Beginner's Guide to Effective Development.",
         "price": 30000,
         "credit": 3
     },
@@ -51,7 +51,7 @@
         "id": 7,
         "cover_img": "https://i.ibb.co/9w8JTRh/Rectangle-3-1.png",
         "title": "AWS, Cloud Computing",
-        "description": "'AWS, Cloud Computing' is a comprehensive guide that introduces readers to Amazon Web Services (AWS) and the broader field of cloud computing.",
+        "description": "AWS Foundations: Building Strong Cloud Computing Skills for Effective Solutions.",
         "price": 25000,
         "credit": 5
     },
@@ -59,7 +59,7 @@
         "id": 8,
         "cover_img": "https://i.ibb.co/wwvWbZw/Rectangle-2-1.png",
         "title": "Database (MySQL)",
-        "description": "'Database (MySQL)' is a comprehensive guide that introduces readers to the world of relational databases with a focus on MySQL.",
+        "description": "MySQL Fundamentals: Building a Strong Foundation in Database Management.",
         "price": 15000,
         "credit": 2
     },

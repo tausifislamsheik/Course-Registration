@@ -59,42 +59,40 @@ const Home = () => {
     // console.log(allCourses)
 
     return (
-      
+      <><h1 className=' text-3xl font-bold py-8 ml-96'>Course Registration</h1>
         <div className='flex'>
-           
-      <div className='flex flex-wrap gap-4'>
-           {
-              allCourses.map(course => (
-                <div key={course.id} className="card w-1/3 bg-base-100 shadow-xl">
-  <figure className="px-4 pt-6">
-    <img src={course.cover_img} alt="Shoes" className="rounded-xl" />
-  </figure>
-  <div className="card-body ">
-    <h2 className="card-title">{course.title}</h2>
-    <p>{course.description}</p>
-    <div className='flex mb-6'>
-      <p className='mr-14 font-semibold'>$ Price: {course.price}</p>
-      <p className='mt-2'><FaBookmark></FaBookmark></p>
-      <p className='ml-14 font-semibold'>Credit: {course.credit}hr</p>
-    </div>
-    <div className="card-actions">
-      <button onClick={()=>handleSelectCourse(course)} className="btn btn-primary w-full">Select</button>
-    </div>
-  </div>
-   </div>
-              ))
-           }
-           </div>
-<div>
-  <div className="cart">
-    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCreditHour={totalCreditHour} totalPrice={totalPrice}></Cart>
-  </div>
-</div>
 
-<ToastContainer />
-                    
-            
+        <div className='flex flex-wrap gap-4'>
+          {allCourses.map(course => (
+            <div key={course.id} className="card w-1/3 bg-base-100 shadow-xl">
+              <figure className="px-4 pt-6">
+                <img src={course.cover_img} alt="Shoes" className="rounded-xl" />
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title">{course.title}</h2>
+                <p>{course.description}</p>
+                <div className='flex mb-6'>
+                  <p className=' font-semibold'>$ Price: {course.price}</p>
+                  <p className='mt-2'><FaBookmark></FaBookmark></p>
+                  <p className='font-semibold'>Credit: {course.credit}hr</p>
+                </div>
+                <div className="card-actions">
+                  <button onClick={() => handleSelectCourse(course)} className="btn btn-primary w-full">Select</button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+        <div>
+          <div className="cart">
+            <Cart selectedCourses={selectedCourses} remaining={remaining} totalCreditHour={totalCreditHour} totalPrice={totalPrice}></Cart>
+          </div>
+        </div>
+
+        <ToastContainer />
+
+
+      </div></>
         
     );
 };

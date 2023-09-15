@@ -5,7 +5,7 @@ import React from 'react';
 
 
 const Cart = ({selectedCourses, remaining, totalCreditHour, totalPrice}) => {
-    console.log(selectedCourses)
+    // console.log(selectedCourses)
     return (
         <div className='card bg-base-100 shadow-xl w-72 p-10 mr-4'>
             <h1 className='font-bold text-blue-600 mb-5'>Credit Hour Remaining: {remaining}hr</h1><hr />
