@@ -13,6 +13,7 @@ const Home = () => {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [remaining, setremaining] = useState(0)
   const [totalCreditHour, setTotalCreditHour] = useState(0)
+  
 
     useEffect(()=>{
       fetch('./data.json')
@@ -26,7 +27,7 @@ const Home = () => {
       let count = course.credit;
 
       if (isExist) {
-        toast.success("Already booked!", {
+        toast.error(" Opps!You've already selected this course.", {
           position:"top-center"
         });
       }else{
@@ -36,10 +37,17 @@ const Home = () => {
         });
         
         const creditHourRemaining = 20 - count;
-        setTotalCreditHour(count);
-        setremaining(creditHourRemaining);
-
-        setSelectedCourses([...selectedCourses, course]);
+        
+        if (count > 20) {
+          toast.error("You have reached the limit of credit hours of 20hr.You can't select more than the remaining credit hours.", {
+            position:"top-right"
+          });
+        }else{
+          setTotalCreditHour(count);
+          setremaining(creditHourRemaining);
+          setSelectedCourses([...selectedCourses, course]);
+        }
+        
       }
       
     }
