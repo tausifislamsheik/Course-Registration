@@ -4,7 +4,7 @@
 import React from 'react';
 
 
-const Cart = ({selectedCourses, remaining, totalCreditHour}) => {
+const Cart = ({selectedCourses, remaining, totalCreditHour, totalPrice}) => {
     console.log(selectedCourses)
     return (
         <div>
@@ -21,8 +21,8 @@ const Cart = ({selectedCourses, remaining, totalCreditHour}) => {
             }
             <br />
             <hr />
-            <h4>Total Credit Hour: {totalCreditHour} </h4><hr />
-            {/* <h5>Total Price: {totalprice} USD</h5> */}
+            <h4 className='font-semibold'>Total Credit Hour: {totalCreditHour} </h4><hr />
+            <h5 className='font-bold'>Total Price: {totalPrice} USD</h5>
         </div>
     );
 };

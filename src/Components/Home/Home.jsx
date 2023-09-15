@@ -13,7 +13,7 @@ const Home = () => {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [remaining, setremaining] = useState(0)
   const [totalCreditHour, setTotalCreditHour] = useState(0)
-  
+  const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(()=>{
       fetch('./data.json')
@@ -25,6 +25,7 @@ const Home = () => {
       const isExist = selectedCourses.find(item=>item.id==course.id)
 
       let count = course.credit;
+      let total = course.price;
 
       if (isExist) {
         toast.error(" Opps!You've already selected this course.", {
@@ -34,6 +35,7 @@ const Home = () => {
 
         selectedCourses.forEach(item => {
           count = count + item.credit;
+          total = total + item.price;
         });
         
         const creditHourRemaining = 20 - count;
@@ -43,6 +45,7 @@ const Home = () => {
             position:"top-right"
           });
         }else{
+          setTotalPrice(total);
           setTotalCreditHour(count);
           setremaining(creditHourRemaining);
           setSelectedCourses([...selectedCourses, course]);
@@ -52,7 +55,7 @@ const Home = () => {
       
     }
 
-    console.log(allCourses)
+    // console.log(allCourses)
 
     return (
         <div className='flex'>
@@ -82,7 +85,7 @@ const Home = () => {
            </div>
 <div>
   <div className="cart">
-    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCreditHour={totalCreditHour}></Cart>
+    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCreditHour={totalCreditHour} totalPrice={totalPrice}></Cart>
   </div>
 </div>
 
