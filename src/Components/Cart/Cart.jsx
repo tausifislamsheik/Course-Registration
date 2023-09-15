@@ -7,9 +7,9 @@ import React from 'react';
 const Cart = ({selectedCourses, remaining, totalCreditHour, totalPrice}) => {
     console.log(selectedCourses)
     return (
-        <div>
-            <h1 className='font-bold text-blue-600'>Credit Hour Remaining: {remaining}hr</h1><hr />
-            <h1 className='font-bold'>Course Name</h1><br />
+        <div className='card bg-base-100 shadow-xl w-72 p-10 mr-4'>
+            <h1 className='font-bold text-blue-600 mb-5'>Credit Hour Remaining: {remaining}hr</h1><hr />
+            <h1 className='font-bold my-4'>Course Name</h1>
             {
                 selectedCourses.map((course, index) =>(
                     <ol>
@@ -19,10 +19,10 @@ const Cart = ({selectedCourses, remaining, totalCreditHour, totalPrice}) => {
                     
                 ))
             }
-            <br />
+            
             <hr />
-            <h4 className='font-semibold'>Total Credit Hour: {totalCreditHour} </h4><hr />
-            <h5 className='font-bold'>Total Price: {totalPrice} USD</h5>
+            <h4 className='font-semibold my-5'>Total Credit Hour: {totalCreditHour} </h4><hr />
+            <h5 className='font-bold mt-5'>Total Price: {totalPrice} USD</h5>
         </div>
     );
 };

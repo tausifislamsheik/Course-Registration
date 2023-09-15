@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaBookmark } from 'react-icons/fa';
 
 
 const Home = () => {
@@ -58,22 +59,23 @@ const Home = () => {
     // console.log(allCourses)
 
     return (
+      
         <div className='flex'>
            
       <div className='flex flex-wrap gap-4'>
            {
               allCourses.map(course => (
-                <div key={course.id} className="card w-96 bg-base-100 shadow-xl">
+                <div key={course.id} className="card w-1/3 bg-base-100 shadow-xl">
   <figure className="px-4 pt-6">
     <img src={course.cover_img} alt="Shoes" className="rounded-xl" />
   </figure>
-  <div className="card-body items-center text-center">
+  <div className="card-body ">
     <h2 className="card-title">{course.title}</h2>
     <p>{course.description}</p>
     <div className='flex mb-6'>
-      <p className='mr-14'>$ Price: {course.price}</p>
-      <p>Bookmark</p>
-      <p className='ml-14'>Credit: {course.credit}hr</p>
+      <p className='mr-14 font-semibold'>$ Price: {course.price}</p>
+      <p className='mt-2'><FaBookmark></FaBookmark></p>
+      <p className='ml-14 font-semibold'>Credit: {course.credit}hr</p>
     </div>
     <div className="card-actions">
       <button onClick={()=>handleSelectCourse(course)} className="btn btn-primary w-full">Select</button>
