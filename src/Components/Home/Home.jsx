@@ -3,12 +3,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
 
   const [allCourses, setAllCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [remaining, setremaining] = useState(0)
+  const [totalCreditHour, setTotalCreditHour] = useState(0)
 
     useEffect(()=>{
       fetch('./data.json')
@@ -17,7 +21,27 @@ const Home = () => {
     },[])
 
     const handleSelectCourse = (course) =>{
-      setSelectedCourses([...selectedCourses, course]);
+      const isExist = selectedCourses.find(item=>item.id==course.id)
+
+      let count = course.credit;
+
+      if (isExist) {
+        toast.success("Already booked!", {
+          position:"top-center"
+        });
+      }else{
+
+        selectedCourses.forEach(item => {
+          count = count + item.credit;
+        });
+        
+        const creditHourRemaining = 20 - count;
+        setTotalCreditHour(count);
+        setremaining(creditHourRemaining);
+
+        setSelectedCourses([...selectedCourses, course]);
+      }
+      
     }
 
     console.log(allCourses)
@@ -50,13 +74,15 @@ const Home = () => {
            </div>
 <div>
   <div className="cart">
-    <Cart selectedCourses={selectedCourses}></Cart>
+    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCreditHour={totalCreditHour}></Cart>
   </div>
 </div>
 
+<ToastContainer />
                     
             
         </div>
+        
     );
 };
 
